@@ -1,0 +1,157 @@
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+--------------------------------------------------------------------------------------------------------------------------------------------
+local Window = Fluent:CreateWindow({
+    --ai skid thì nhớ đổi tên =)
+    --táo hub , aniee hub :>
+    Title = "DEEP HUB",
+    SubTitle = "V1 [ FREE ]",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(530, 350),
+    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "light",
+    MinimizeKey = Enum.KeyCode.End -- Used when theres no MinimizeKeybind
+})
+local Tabs = {
+    Redz = Window:AddTab({ Title = "Redz Hub", Icon = "home" }),
+    Speed = Window:AddTab({ Title = "Speed Hub", Icon = "settings" }),
+    Blox = Window:AddTab({ Title = "Blox Fruit", Icon = "settings" }),
+    
+}
+
+Tabs.Redz:AddButton({
+	Title = "Redz Hub - Blox Fruit",
+	Description = "",
+	Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))()
+		end
+})
+
+Tabs.Redz:AddButton({
+	Title = "Redz Hub - Meme Sea",
+	Description = "",
+	Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/MemeSea/refs/heads/main/Source.lua"))()
+		end
+})
+
+Tabs.Redz:AddButton({
+	Title = "Redz Hub - Pet Simulator 99",
+	Description = "",
+	Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua"))()
+		end
+})
+
+Tabs.Redz:AddButton({
+	Title = "Redz Hub - Blade Ball",
+	Description = "",
+	Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BladeBall/main/redz9999"))()
+		end
+})
+
+Tabs.Speed:AddButton({
+	Title = "Speed Hub - Petgo",
+	Description = "",
+	Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+		end
+})
+
+Tabs.Speed:AddButton({
+	Title = "Speed Hub - Fisch",
+	Description = "",
+	Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+		end
+})
+
+Tabs.Speed:AddButton({
+	Title = "Speed Hub - Anime Vanguard",
+	Description = "",
+	Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Script-Games/main/Anime%20Vanguards.lua"))()
+		end
+})
+
+local Toggle = Tabs.Main:AddToggle("ToggleMainFarm", {Title = "Kaitun Blox Fruit", Default = false })
+Toggle:OnChanged(function(Value)
+    _G.FindCheckLevel = Value
+    if Value then
+         
+    end
+end)
+
+local Toggle = Tabs.Main:AddToggle("Togglecheat", {Title = "Delete Anti-Cheat [ Premium ]", Default = false })
+Toggle:OnChanged(function(Value)
+    _G.FindCheckLevbel = Value
+    if Value then
+         
+    end
+end)
+local Toggle = Tabs.Main:AddToggle("ToggleMainFarmk", {Title = "Anti AFK - AntiBan", Default = true })
+Toggle:OnChanged(function(Value)
+    _G.FindCheckLevekl = Value
+    if Value then
+         
+    end
+end)
+
+Tabs.Blox:AddButton({
+	Title = "Xero Hub",
+	Description = "Xero Hub Blox Fruit",
+	Callback = function()
+    xerohub()
+     end
+})
+
+Tabs.Blox:AddButton({
+	Title = "Astral Hub",
+	Description = "Astral Hub Script Blox Fruit",
+	Callback = function()
+    Astral()
+		end
+})
+
+
+
+Tabs.Blox:AddButton({
+	Title = "Gangtang Hub",
+	Description = "GangTang Hub Script",
+	Callback = function()
+    gangtang()
+		end
+})
+
+Tabs.Blox:AddButton({
+	Title = "Andepzai Hub",
+	Description = "Andepzai Hub Script Blox Fruit",
+	Callback = function()
+  andepzai()
+
+		end
+})
+
+
+function xerohub()
+getgenv().Team = "Marines"
+getgenv().Hide_Menu = false
+getgenv().Auto_Execute = false
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Xero2409/XeroHub/refs/heads/main/main.lua"))()
+end
+
+function gangtang()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/a5c3af437cd698d64379cf75cacb9281.lua"))()
+end
+
+function andepzai()
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AnDepZaiHub/AnDepZaiHubBeta/refs/heads/main/AnDepZaiHubNewUpdated.lua"))()
+end
+
+function Astral()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Overgustx2/Main/refs/heads/main/BloxFruits_25.html"))()
+end
+
